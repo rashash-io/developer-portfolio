@@ -15,6 +15,21 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 If you need any help with this project, don't hesitate to contact me, 
 I'll be more than happy to help. All my contact info are on the project under the contact page. 
+### 
+I have it on bacause deploying to GitHub pages requires it to be enabled.
+If you are going to run this project on your machine, make sure that the `output: "export",`.
+is commented out. since this is used 
+
+At the root of your app, create a .env folder to store secrets safley & add the following to it 
+```
+NEXT_PUBLIC_EMAILJS_SERVICE = service_name
+NEXT_PUBLIC_EMAILJS_TEMPLATE = template_name
+NEXT_PUBLIC_EMAILJS_KEY = key
+```
+replace the service_name , template_name, & key with the corrosponding variables you got from emailJS
+
+###  
+
 
 First, run the development server:
 
@@ -34,14 +49,6 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
