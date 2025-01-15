@@ -31,16 +31,15 @@ replace the service_name , template_name, & key with the corrosponding variables
 ###  
 
 
-First, run the development server:
-
+Install the dependenncies 
+```bash
+npm install
+#OR
+npm i
+```
+Runnding developmetnt wenviroment
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
