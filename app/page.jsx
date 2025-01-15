@@ -3,6 +3,7 @@ import {FiDownload} from "react-icons/fi";
 import Socials from "./Socials";
 import Photo from "../components/Photo";
 import Stats from "../components/Stats";
+import GitHubStats from "../components/gitHubStats/GitHubStats";
 
 const Home = () => {
   return (
@@ -48,16 +49,15 @@ const Home = () => {
             </div>
           </div>
 
-          
-
           {/* Logo w/circle animation */}
           <div className="order-1 xl:order-none mb-0 w-full h-full">
-            
             <Photo />
           </div>
         </div>
+        <GitHubStats />
          
       </div>
+
       <Stats />
       
     </section>

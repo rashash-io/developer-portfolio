@@ -1,13 +1,10 @@
-import { JetBrains_Mono} from "next/font/google";
+//Env
+import dotenv from "dotenv";
+dotenv.config();
+
 import "./globals.css";
-
-
-//components
-import Header from "../components/Header";
-import PageTransition from "./PageTransition";
-import StairTransition from "./StairTransition";
-
-
+//Font
+import { JetBrains_Mono} from "next/font/google";
 const JetBrainsMono = JetBrains_Mono({ 
   subsets: ["latin"], 
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -15,12 +12,16 @@ const JetBrainsMono = JetBrains_Mono({
 });
 
 
+//components
+import Header from "../components/Header";
+import PageTransition from "./PageTransition";
+import StairTransition from "./StairTransition";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"></meta>
-
       </head>
       <body className={JetBrainsMono.variable}>
         <Header />

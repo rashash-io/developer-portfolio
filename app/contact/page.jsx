@@ -1,9 +1,10 @@
 "use client";
 import  Link  from 'next/link';
+
+//UI
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
-
 import { 
   Select,
   SelectContent,
@@ -25,6 +26,8 @@ import { SiImessage } from "react-icons/si";
 import { IoPersonSharp } from "react-icons/io5";
 import { BsFillTelephoneFill, BsFillSendFill } from "react-icons/bs";
 import { BiSolidContact } from "react-icons/bi";
+
+
 
 const info = [
   {
@@ -53,40 +56,48 @@ const info = [
   },
 
 ];
-
+//LIBS
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const Contact = () => {
   const form = useRef();
-  const dummyRef = useRef();
 
   const sendEmail = (e) => {
+    let data ={
+      key : process.env.NEXT_PUBLIC_EMAILJS_KEY,
+      template : process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE,
+      service : process.env.NEXT_PUBLIC_EMAILJS_SERVICE,
+    };
     e.preventDefault();
-    emailjs.sendForm('service_portfolio', 'template_lp5yqcm', form.current, {
-      publicKey: '4I94FAyM2VrfqAMn9',
-    })
+    emailjs.sendForm(
+      data.service, 
+      data.template,
+      form.current,{
+        publicKey: data.key,
+      }
+    )
     .then((result) =>{
       console.log(result.text);
     }, (error) => {
       console.log(error.text);
     });
     e.target.reset();
-
   };
 
   return (
     <motion.section 
-    initial= {{ opacity:0 }}
-    animate={{
-      opacity: 1,
-      transition: { delay: 2.4, duration:0.4, ease: "easeIn"},
-    }}
-    className="py-6 bg-darkbg"
+
+      initial= {{ opacity:0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration:0.4, ease: "easeIn"},
+      }}
+      className="py-6 bg-darkbg"
     >
       <div className="container  mx-auto ">
-
-      
         <div className="flex flex-col xl:flex-row gap-[30px]">
           
           {/* Form */}
@@ -118,9 +129,6 @@ const Contact = () => {
                   </div>
                   <Input type="email" name="email"className="pl-12 w-full bg-darkernavy" placeholder="Email address"/>
                 </div>
-
-                
-               
               </div>
 
               {/* Selects */}
@@ -139,35 +147,28 @@ const Contact = () => {
                   </SelectGroup>
                 </SelectContent>
               </Select>
-                  
 
               {/* Text Area */}
               <Textarea required name="message"className="h-[200px] bg-darkernavy border-2" placeholder="Type your message here ...."/>
             
               {/* Button */}
-              <Button type="submit" size="md" className="rounded-full flex gap-2 justify-center items-center max-w-60 self-center">
-                            
+              <Button type="submit" size="md" className="rounded-full flex gap-2 justify-center items-center max-w-60 self-center">          
                 <span className="text-2xl"><BsFillSendFill /></span>
                 <span>Send message</span>          
               </Button>
-           
             </form>
           </div>
 
           {/* INFO */}
-          
-
-          <div className="flex-1  justify-center flex items-center  order-1 xl:order-none mb-8 xl:mb-0">
-            
+          <div className="flex-1  justify-center flex items-center  order-1 xl:order-none mb-8 xl:mb-0">      
             <ul className="flex flex-col gap-6 self-center ">
               <div className='flex flex-col justify-center items-center gap-4'>
-              <h3 className='text-3xl'>My contact info</h3>
-
+                <h3 className='text-3xl'>My contact info</h3>
                 <p className=' text-white/60 text-xs text-center'>To make things easier, click the <br/>button to add my vcard to your contacts</p>
-              <Button variant="outline" className="flex transition-all text-primary  rounded-md bg-gradient-to-r from-purple to-teal-300 hover:from-pink-500 hover:to-teal-400 ">
-                <span className='text-2xl pr-3'><BiSolidContact /></span>
-                <a href="https://rashash.io/rashash-contact.vcf" target="_blank"  rel="noopener noreferrer">save my contact</a>
-              </Button>
+                  <Button variant="outline" className="flex transition-all text-primary  rounded-md bg-gradient-to-r from-purple to-teal-300 hover:from-pink-500 hover:to-teal-400 ">
+                    <span className='text-2xl pr-3'><BiSolidContact /></span>
+                    <a href="https://rashash.io/rashash-contact.vcf" target="_blank"  rel="noopener noreferrer">save my contact</a>
+                  </Button>
               </div>
               {info.map((item,index) => {
                 return (
@@ -177,27 +178,20 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className='text-white/60'>{item.title}</p>
-                      
-                      
-                      <div className='flex gap-2 items-center'>
-                        <a href={item.href} target="_blank"  rel="noopener noreferrer">
-                          <MdOpenInNew className="text-accent hover:text-white border-b-2 border-accent/35 " />
-                        </a>
-
-                        
-                        <h3>{item.description}</h3>
+                        <div className='flex gap-2 items-center'>
+                          <a href={item.href} target="_blank"  rel="noopener noreferrer">
+                            <MdOpenInNew className="text-accent hover:text-white border-b-2 border-accent/35 " />
+                          </a>
+                          <h3>{item.description}</h3>
                       </div>
                     </div>
                   </li>
                 );
               })}
             </ul>
-
            </div>
         </div>
-
       </div>
-
     </motion.section>
   );
 };

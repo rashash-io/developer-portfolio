@@ -9,15 +9,22 @@ import MobileNav from "../app/MobileNav";
 //Logo
 import Image from "next/image";
 import Logo from "../public/logo1000.webp";
-
 const Header = () => {
+
 return ( 
-        <header className=" h-[15vh]  bg-darkbg/60 grad-bg-nav  text-white border-b-2 border-accent shadow-2xl">
-            
-            <div className="flex flex-col justify-center ">
-                    <div className="container mx-auto flex justify-between items-center">
+        <header className=" h-[15vh]  bg-darkbg/60 grad-bg-nav  text-white border-b-2 border-accent shadow-2xl outline flex justify-center">
+
+            <div className="container mx-auto flex justify-between items-center">
                     
                 {/* Logo */}
+                <div className="gradient-background rounded-full   transition-all  w-[100px] h-[100px] xl:w-[120px] xl:h-[120px] overflow-hidden ">
+                    <Image 
+                        src={Logo} 
+                      
+                        
+                        alt="logo" 
+                        className=" box-shadow-animate rounded-full gradient-text"/>    
+                </div>
 
                 {/* desktop nav & hire me*/}
                 <div className="hidden xl:flex items-center py-8 xl:py-8 gap-8">
@@ -30,21 +37,17 @@ return (
                             <span>Hire Me!</span>
                             
                         </Button>
-                       
+                    
                     </Link>
                     
                 </div>
 
                 {/* mobile nav */}
                 <div className="xl:hidden">
-                    
                     <MobileNav />
                 </div>
-            </div>
             
-
-                <div className=" w-full h-[6px] bg-gradient-to-l from-cyan-400 via-violet-600 to-fuchsia-600  inline-block text-transparent bg-clip-text"></div>
-            </div>
+            </div> 
         </header>
     )
 }

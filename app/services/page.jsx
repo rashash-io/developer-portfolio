@@ -3,6 +3,9 @@
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
 
+import Image from "next/image";
+
+
 const services = [
   {
     num: '01',
@@ -52,34 +55,34 @@ const Services = () => {
         >
           {services.map((service, index) => {
             return (
-              <div key={index} className="grad-border border-4 ">
+              <div key={index} className="grad-border border-4">
               <div 
-                className=" h-full bg-[url('/grid.svg')] shadow-2xl bg-black hover:border-accentgreen      p-4 rounded-xl flex-1 transition-all duration-1000 flex flex-col  gap-6 group ">
+                className=" h-full bg-black  bg-[url('/grid.svg')] bg-blend-saturation shadow-2xl  hover:border-accentgreen  rounded-xl flex-1 transition-all duration-1000 flex flex-col justify-center gap-6 group ">
 
                   {/* TOP */}
-                    <div className=" w-full overflow-hidden h-[300px] rounded-2xl  border-pinkred border-2 relative group"> 
+                    <div className=" w-full overflow-hidden   relative group"> 
                       
                       
-                      <div className=" z-20 p-4 absolute w-full flex h-full justify-between items-end ">
-                        <div className="text-5xl font-extrabold text-outline text-transparent border bg-darknavy p-3  rounded-3xl    group-hover:text-outline-hover transition-all duration-500">
+                      <div className=" z-20 absolute w-full flex h-full justify-between items-end  ">
+                        <div className="text-5xl font-extrabold text-outline text-transparent border bg-darknavy/80 p-3  m-4 rounded-3xl    group-hover:text-outline-hover transition-all duration-500">
                           {service.num}
                         </div>
-                        <Link href={service.href} className=" hover:scale-125 w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
+                        <Link href={service.href} className="m-4 hover:scale-125 w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                           <BsArrowDownRight className="  text-primary text-3xl hover:text-purple"/>
                         </Link>
                       </div>
-                      <div className="z-1  scale-150 absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]">
-                        <img className="transition-all duration-300 z-0 w-full shadow-lg scale-150" src={service.img}/>
+                      <div className="z-1 h-[250px]  ">
+                        <img className="transition-all duration-300 z-0 object-contain shadow-lg rounded-t-xl" src={service.img}/>
                       </div>
                     </div>
                   
                   {/* TITLE */}
-                  <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2> 
-                  {/* BORDER 
+                  <h2 className="text-[42px] text-center mx-4 font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2> 
+                  
                   <div className="border-b self-center border-white/20 w-64"></div>
-                  */}
+                  
                   {/* DESCRIPTION */}
-                  <p className="text-white/60">{service.description}</p>
+                  <p className="text-white/60 mx-4">{service.description}</p>
                 
                   </div>
                   

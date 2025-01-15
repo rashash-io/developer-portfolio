@@ -11,7 +11,6 @@ import { BiSolidContact } from 'react-icons/bi';
 //Logo
 import Image from "next/image";
 import Logo from "../public/logo1000.webp";
-import { div } from 'framer-motion/client';
 
 const links = [
   {
@@ -37,7 +36,7 @@ const MobileNav = () => {
   const pathname = usePathname();
   return (
   <Sheet>
-    <SheetTrigger className='flex justify-center items-center py-8'>
+    <SheetTrigger className='flex justify-center items-center py-8 '>
       <CiMenuFries className='text-[32px] text-accent'/>
     </SheetTrigger>
     <SheetContent className="flex flex-col justify-around items-center">
@@ -47,7 +46,7 @@ const MobileNav = () => {
       { /* LOGO */ }
         <Link href="/" className='flex justify-center'>
               <div className="items-center  rounded-full ">
-                <Image src={Logo} width={150} height={150} alt="logo" className="box-shadow-animate rounded-full  gradient-text  "/>      
+                <Image src={Logo} width={150} height={150} alt="logo"  className="box-shadow-animate rounded-full  gradient-text  "/>      
               </div>              
         </Link>     
      
