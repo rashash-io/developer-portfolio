@@ -10,6 +10,32 @@
 ## Getting Started
 If you need any help with this project, don't hesitate to contact me, 
 I'll be more than happy to help. All my contact info are on the project under the contact page. 
+### #1. Setting EmailJS
+<img align="center" src="https://i.sstatic.net/hzFZ9.png"/>
+Set up an account at https://www.emailjs.com/
+Connect an email account to emailJS and get YOUR_SERVICE_ID
+Connect an email by adding a service, in this case I used gmail.
+
+note the id next to `Service ID`
+
+
+
+<img align="center" src="https://i.sstatic.net/zqDWr.png"/>
+Thats How I set my template
+```
+Name: {{{name}}}
+Email: {{{email}}}
+Phone: {{{phone}}}
+Selection: {{{select}}}
+Message: {{{message}}}
+```
+<img align="center" src="https://i.sstatic.net/Jlyjq.png"/>
+
+Get YOUR_USER_ID
+You can find your API Keys by going to Account
+Replace 'YOUR_USER_ID'(step 2) with the id under API Keys -> Public Key
+
+<img src="https://i.sstatic.net/0pc1M.png"/>
 
 ### .env Variables
 At the root of your app, create a .env folder to store secrets safely & add the following to it 
