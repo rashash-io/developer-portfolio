@@ -14,7 +14,7 @@ const Header = () => {
 return ( 
         <header className=" h-[15vh]  bg-darkbg/60 grad-bg-nav  text-white border-b-2 border-accent shadow-2xl outline flex justify-center">
 
-            <div className="container mx-auto flex justify-between items-center">
+            <div className="w-5/6 mx-auto flex justify-between items-center">
                     
                 {/* Logo */}
                 <div className="gradient-background rounded-full   transition-all  w-[100px] h-[100px] xl:w-[120px] xl:h-[120px] overflow-hidden ">
@@ -27,11 +27,11 @@ return (
                 </div>
 
                 {/* desktop nav & hire me*/}
-                <div className="hidden xl:flex items-center py-8 xl:py-8 gap-8">
+                <div className="hidden xl:flex items-center py-8 xl:py-8 gap-8 text-2xl">
                     <Nav />
                     <Link href="/contact">   
 
-                        <Button className="rounded-full flex gap-2 justify-center items-center ">
+                        <Button className="rounded-full flex gap-2 justify-center items-center text-2xl ">
                             
                             <span className="text-2xl"><MdOutlineWork /></span>
                             <span>Hire Me!</span>
