@@ -41,6 +41,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 check everything is running correctly, Edit it to your preference & put it in your data.
 Now its ready for production
 
+##
+Yes, you can fork this repo & use it as your own, but please give me proper credit by linking back to (RASHASH.IO)[https://rashash.io]Thanks!
+
 
 
 
