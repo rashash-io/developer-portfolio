@@ -23,7 +23,7 @@ const reverseIndex = (index) => {
 Each div will have the same animation defined by the stairsAnimation object. 
 The delay for each div is calculates sinamically based on it's reversed index,
 creating a staggered effect with decreasing delay for each subsequent step.*/}
-const Stairs = () => {
+export const Stairs = () => {
     return(
 
         <>

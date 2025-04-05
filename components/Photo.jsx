@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Logo from "../public/logo1000.webp";
 
-const Photo = () => {
+export const Photo = () => {
   return (
     <div className="w-full h-full relative ">
       <div className="h-[200px]"></div>
