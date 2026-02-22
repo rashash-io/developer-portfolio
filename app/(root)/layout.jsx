@@ -14,9 +14,9 @@ const JetBrainsMono = JetBrains_Mono({
 });
 
 //components
-import { Header, PageTransition, StairTransition } from "../components/";
+import { Header, PageTransition, StairTransition } from "../../components/index";
 
-
+//Metadata
 import { Metadata } from 'next';
 
 export const metadata = {

@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
   Textarea,
-} from "../../components/";
+} from "../../../components/index";
 
 // HOOKS
 import { useRef } from "react";
@@ -26,7 +26,7 @@ import { MdEmail, MdOpenInNew } from "react-icons/md";
 //LIBS
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { contactLinksAndInfo } from "../../lib";
+import { contactLinksAndInfo } from "../../../lib";
 import dotenv from "dotenv";
 dotenv.config();
 

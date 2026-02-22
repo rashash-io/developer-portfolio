@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from '../../components/ui/button';
+import { Button } from '../../../components/ui/button';
 import {
   FaHtml5,
   FaCss3,
@@ -166,15 +166,15 @@ const skills = {
   ],
 };
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../../components/ui/tabs';
 import { 
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '../../components/ui/tooltip';
+} from '../../../components/ui/tooltip';
 
-import { ScrollArea } from "../../components/ui/scroll-area";
+import { ScrollArea } from "../../../components/ui/scroll-area";
 import { motion } from 'framer-motion';
 
 const Resume = () => {

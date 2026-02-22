@@ -1,5 +1,5 @@
 // Components
-import { GitHubStats, HomeIntroCard, Photo, Stats } from "../components/";
+import { GitHubStats, HomeIntroCard, Photo, Stats } from "../../components/index";
 
 export const Home = () => {
   return (
