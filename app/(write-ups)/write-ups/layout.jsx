@@ -18,6 +18,7 @@ import { Header, PageTransition, StairTransition } from "../../../components/ind
 
 //Metadata
 
+
 export const metadata = {
   title: 'RA$HASH',
   description: 'This is my web developer portfolio',
