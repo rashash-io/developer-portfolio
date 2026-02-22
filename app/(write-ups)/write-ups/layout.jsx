@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 //CSS
-import ".././globals.css";
+import "../.././globals.css";
 
 //Font
 import { JetBrains_Mono } from "next/font/google";
@@ -14,7 +14,7 @@ const JetBrainsMono = JetBrains_Mono({
 });
 
 //components
-import { Header, PageTransition, StairTransition } from "../../components/index";
+import { Header, PageTransition, StairTransition } from "../../../components/index";
 
 //Metadata
 import { Metadata } from 'next';
