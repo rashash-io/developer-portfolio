@@ -17,7 +17,6 @@ const JetBrainsMono = JetBrains_Mono({
 import { Header, PageTransition, StairTransition } from "../../../components/index";
 
 //Metadata
-import { Metadata } from 'next';
 
 export const metadata = {
   title: 'RA$HASH',
