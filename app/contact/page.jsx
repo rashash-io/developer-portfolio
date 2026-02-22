@@ -30,6 +30,8 @@ import { contactLinksAndInfo } from "../../lib";
 import dotenv from "dotenv";
 dotenv.config();
 
+
+
 const Contact = () => {
   const form = useRef();
 

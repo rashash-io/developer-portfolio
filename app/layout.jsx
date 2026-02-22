@@ -16,6 +16,16 @@ const JetBrainsMono = JetBrains_Mono({
 //components
 import { Header, PageTransition, StairTransition } from "../components/";
 
+
+import { Metadata } from 'next';
+
+export const metadata = {
+  title: 'RA$HASH',
+  description: 'This is my web developer portfolio',
+  keywords: ['nextjs', 'webdev', 'seo'],
+};
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
