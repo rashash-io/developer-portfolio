@@ -3,8 +3,14 @@ import './styles.css'
 
 import { useEffect, useState } from 'react'
 
-// Data
-import { daysAndMonths } from '../../lib';
+
+
+// Days & Months
+export const daysAndMonths = {
+  days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+  months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+};
+
 
 // API Links
 const apiLinks = {
