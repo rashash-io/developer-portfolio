@@ -17,7 +17,7 @@ export const GitHubStats = () => {
   const [totalContributions, setTotalContributions] = useState([]);
   const [totalPublicRepos, setTotalPublicRepos] = useState([]);
 
-  
+
   useEffect(() => {
     fetch(apiLinks.githubContributionsApi)
       .then((res) => {
@@ -25,21 +25,21 @@ export const GitHubStats = () => {
       })
       .then((data) => {
         let contrib = data.contributions;
-        let contribYear = contrib.slice(0,365);
+        let contribYear = contrib.slice(0, 365);
         setContributions(contribYear);
         setTotalContributions(data.total);
       });
-      fetch(apiLinks.githubApi)
+    fetch(apiLinks.githubApi)
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         setTotalPublicRepos(data.public_repos);
       });
-  
+
   }, []);
 
-  
+
   return (
     <div className=" flex justify-center items-center mt-4 ">
       <div className="flex justify-center items-center flex-wrap  bg-black/50 rounded-2xl ">
@@ -48,11 +48,11 @@ export const GitHubStats = () => {
           <div className="flex gap-4 leading-snug flex-wrap">
             <div className="flex justify-center items-center gap-2 text-white/50">
               <span className="text-6xl  text-pinkred">
-                {totalContributions[2025]}
+                {totalContributions[2026]}
               </span>
               <p className="text-xs">
                 contributions <br />
-                since Jan 2025
+                since Jan 2026
               </p>
             </div>
             <div className="flex justify-center items-center gap-2 text-white/50 ">
